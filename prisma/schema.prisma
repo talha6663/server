@@ -1,0 +1,149 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model patient{
+      id Int @id @default(autoincrement())
+      admin_id Int?
+      name String? @db.Text
+      address String? @db.Text
+      city String? @db.Text
+      province String? @db.Text
+      telephoneno String? @db.Text
+      mobileno String? @db.Text
+      dateofbirth DateTime?
+      gender String? @db.Text
+      edu_status String? @db.Text
+      occupation String? @db.Text
+      birth_weight String? @db.Text
+      delivery_type String? @db.Text
+      plurality String? @db.Text
+      placeofbirth String? @db.Text
+      asphyxia String? @db.Text
+      jaundice String? @db.Text
+      nicustay String? @db.Text
+      prematurity String? @db.Text
+      mother_name String? @db.Text
+      father_name String? @db.Text
+      mother_education String? @db.Text
+      father_education String? @db.Text
+      mother_ocupation String? @db.Text
+      father_occupation String? @db.Text
+      maternal_drug String? @db.Text
+      maternal_infection String? @db.Text
+      consanguineous_marriage String? @db.Text
+      syndrome String? @db.Text
+      hearing_difficulty String? @db.Text
+      infectious_disease String? @db.Text
+      head_ear_trauma String? @db.Text
+      immunization String? @db.Text
+      ototoxic_drug String? @db.Text
+      delayed_speech String? @db.Text
+      hearing_health_difficulty String? @db.Text
+      hearing_device String? @db.Text
+      loud_noise_frequency String? @db.Text
+      headphone_frequency String? @db.Text
+      tinnitus_history String? @db.Text
+      vertigo_history String? @db.Text
+      chronic_ear_infections String? @db.Text
+      glue_ear_ome String? @db.Text
+      loud_noise_exposure String? @db.Text
+      presenting_complaint String? @db.Text
+      complaint_duration String? @db.Text
+      ear_pain_r String? @db.Text
+      ear_pain_l String? @db.Text
+      ear_pain_both String? @db.Text
+      ear_pain_normal String? @db.Text
+      auricle_normal_r String? @db.Text
+      auricle_normal_l String? @db.Text
+      auricle_malformation_r String? @db.Text
+      auricle_malformation_l String? @db.Text
+      external_ear_deformity_r String? @db.Text
+      external_ear_deformity_l String? @db.Text
+      external_ear_inflammation_r String? @db.Text
+      external_ear_inflammation_l String? @db.Text
+      external_ear_wax_r String? @db.Text
+      external_ear_wax_l String? @db.Text
+      external_ear_foreign_body_r String? @db.Text
+      external_ear_foreign_body_l String? @db.Text
+      external_ear_otorrhoea_r String? @db.Text
+      external_ear_otorrhoea_l String? @db.Text
+      external_ear_fungi_r String? @db.Text
+      external_ear_fungi_l String? @db.Text
+      external_ear_not_seen_r String? @db.Text
+      external_ear_not_seen_l String? @db.Text
+      ear_drum_perforation_r String? @db.Text
+      ear_drum_perforation_l String? @db.Text
+      ear_drum_dullness_r String? @db.Text
+      ear_drum_dullness_l String? @db.Text
+      ear_drum_red_bulging_r String? @db.Text
+      ear_drum_red_bulging_l String? @db.Text
+      ear_drum_normal_r String? @db.Text
+      ear_drum_normal_l String? @db.Text
+      ear_drum_not_seen_r String? @db.Text
+      ear_drum_not_seen_l String? @db.Text
+      aided_hearing_level String?
+      distraction String? @db.Text
+      boa String? @db.Text
+      play_audiometry String? @db.Text
+      vra String? @db.Text
+      impedence_audiometry String? @db.Text
+      pta String? @db.Text
+      era String? @db.Text
+      assr String? @db.Text
+      pta_ac_r_twofifty String? @db.Text
+      pta_ac_l_twofifty String? @db.Text
+      pta_ac_r_fivehundred String? @db.Text
+      pta_ac_l_fivehundred String? @db.Text
+      pta_ac_r_onek String? @db.Text
+      pta_ac_l_onek String? @db.Text
+      pta_ac_r_twok String? @db.Text
+      pta_ac_l_twok String? @db.Text
+      pta_ac_r_fourk String? @db.Text
+      pta_ac_l_fourk String? @db.Text
+      screening String? @db.Text
+      impedence_audiometry_r_typea String? @db.Text
+      impedence_audiometry_r_typeb String? @db.Text
+      impedence_audiometry_r_typec String? @db.Text
+      impedence_audiometry_r_typead String? @db.Text
+      impedence_audiometry_r_typeas String? @db.Text
+      impedence_audiometry_r_perforation String? @db.Text
+      impedence_audiometry_l_typea String? @db.Text
+      impedence_audiometry_l_typeb String? @db.Text
+      impedence_audiometry_l_typec String? @db.Text
+      impedence_audiometry_l_typead String? @db.Text
+      impedence_audiometry_l_typeas String? @db.Text
+      impedence_audiometry_l_perforation String? @db.Text
+      result_ear_r String? @db.Text
+      result_ear_l String? @db.Text
+      hearing_loss_r String? @db.Text
+      hearing_loss_l String? @db.Text
+      first_date String? @db.Text
+      first_oae String? @db.Text
+      first_abr String? @db.Text
+      second_date String? @db.Text
+      second_oae String? @db.Text
+      second_abr String? @db.Text
+      result_l_pass String? @db.Text
+      result_l_refer String? @db.Text
+      result_r_pass String? @db.Text
+      result_r_refer String? @db.Text
+      result_r_tympanogram String? @db.Text
+      result_r_oae String? @db.Text
+      result_r_abr String? @db.Text
+      result_l_tympanogram String? @db.Text
+      result_l_oae String? @db.Text
+      result_l_abr String? @db.Text
+      comment String? @db.Text
+      external_ear_normal_l String? @db.Text
+      external_ear_normal_r String? @db.Text
+      oae String? @db.Text
+}
